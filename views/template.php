@@ -9,8 +9,8 @@ date_default_timezone_set('America/El_Salvador');
 
   <meta charset="utf-8">
 
-  <title>Tierramar Usulutan</title>
-  <link rel="icon" href="views/assets/img/favicon.ico" type="image/ico" />
+  <title>RESTAURANTE</title>
+  <link rel="icon" href="views/assets/img/icorest.ico" type="image/ico" />
 
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

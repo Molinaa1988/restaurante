@@ -2,7 +2,7 @@
 <header class="main-header">
 
     <a href="#" class="logo">
-      <span class="logo-mini"><b>TM</b></span>
+      <span class="logo-mini"><b>R</b></span>
       <span class="logo-lg">Restaurante</span>
     </a>
 

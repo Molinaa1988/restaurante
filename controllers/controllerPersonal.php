@@ -7,7 +7,7 @@
 
       if(isset($_POST["duiR"])){
         $datosController = array(
-          "IdCargo"=>$_POST["idCargoR"],
+          "idCargo"=>$_POST["idCargoR"],
           "dui"=>$_POST["duiR"],
           "apellidos"=>$_POST["apellidosR"],
           "nombres"=>$_POST["nombresR"],
@@ -47,7 +47,7 @@
       if(isset($_POST["idA"])){
         $datosController = array(
           "id"=>$_POST["idA"],
-          "IdCargo"=>$_POST["idCargoA"],
+          "idCargo"=>$_POST["idCargoA"],
           "dui"=>$_POST["duiA"],
           "apellidos"=>$_POST["apellidosA"],
           "nombres"=>$_POST["nombresA"],
@@ -82,7 +82,7 @@
 
 
 
-		public function vistaPersonal(){
+		public function vistaPersonal(){z
 		  $respuesta = modelPersonal::vistaPersonal();
 		  return $respuesta;
 	  }
