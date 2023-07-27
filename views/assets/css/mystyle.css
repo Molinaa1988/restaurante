@@ -1,0 +1,44 @@
+.contenedorPlatos {
+    height: 547px;
+    overflow:auto;
+    box-sizing: border-box;
+    padding:0 1rem;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.contenedorPlatos::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedorPlatos::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.contenedorPlatos::-webkit-scrollbar-button:increment,.contenedorPlatos::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.contenedorPlatos::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.contenedorPlatos::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.contenedorPlatos::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+.contenedor {
+    /*Estilos estándar experimentales (Principalmente Firefox)*/
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+}
+
+.swal2-popup {
+    font-size: 1.6rem !important;
+}

@@ -1,0 +1,11 @@
+# Impedir que se pueda ver el listado de contenidos de un directorio
+
+Options All -Indexes
+
+# Url Amigables
+
+RewriteEngine on
+
+RewriteRule ^(\w+)$ index.php?action=$1 [QSA,L]
+
+#php_value max_execution_time 300
