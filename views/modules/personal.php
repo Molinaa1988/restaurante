@@ -270,7 +270,7 @@
                                   <strong>Telefono:</strong> <?php echo $item['Telefono']; ?>
                                 </div>
                                 <div class="col-md-6">
-                                  <strong>Estado:</strong> <?php if($item['Estado'] == 'A'){echo 'Activo';}
+                                  <strong>Estado:</strong> <?php if($item['Estado'] == '1'){echo 'Activo';}
                                         else {echo 'No activo';} ?> <br>
                                 </div>
                               </div>
@@ -394,8 +394,8 @@
                                   <div class="input-group">
                                     <span class="input-group-addon">Estado</span>
                                     <select class="form-control" name="estadoA" autocomplete="off" required>
-                                      <option <?php if($item['Estado'] == 'A'){echo 'selected';} ?> value="A">Activo</option>
-                                      <option <?php if($item['Estado'] == 'N'){echo 'selected';} ?> value="N">No Activo</option>
+                                      <option <?php if($item['Estado'] == '1'){echo 'selected';} ?> value="1">Activo</option>
+                                      <option <?php if($item['Estado'] == '0'){echo 'selected';} ?> value="0">No Activo</option>
                                     </select>
                                   </div>
                                 </div>

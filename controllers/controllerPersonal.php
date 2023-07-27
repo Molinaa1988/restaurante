@@ -75,14 +75,15 @@
           });
           </script>';
         } else {
-          header("location:index.php");
+          header("location:Personal.php");
         }
       }
     }
 
 
 
-		public function vistaPersonal(){z
+		public function vistaPersonal()
+    {
 		  $respuesta = modelPersonal::vistaPersonal();
 		  return $respuesta;
 	  }
