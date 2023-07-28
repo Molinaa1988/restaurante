@@ -45,10 +45,10 @@
    <ul class="treeview-menu">
 
      <li><a href="proveedores">Proveedores</a></li>
-     <li><a href="personal">Personal</a></li>
+     <li><a href="personal">Empleados</a></li>
        <li><a href="categoria">Categoria</a></li>
      <li><a href="inventario">Inventario</a></li>
-     <li><a href="compra">Compra</a></li>
+     <li><a href="compra">Compras</a></li>
      <li><a href="gastoIngreso">Gasto - Ingreso</a></li>
      <!-- <li><a href="#">Cuentas por pagar</a></li>
      <li><a href="#">Cuentas por cobrar</a></li> -->
