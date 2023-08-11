@@ -48,7 +48,7 @@
                 <div class="box-body">
                   <div class="callout callout-danger">
                     <h4>No hay corte Z para la fecha de: <?php echo date("d/m/Y", strtotime($dia_anterior)); ?> </h4>
-                    <h4>Diríjase a Facturacion - Cierre - Corte Z</h4> 
+                    <h4>Diríjase a Facturacion -> Cierre -> Corte Z</h4> 
                   </div>
                 </div>
               </div>
@@ -95,8 +95,8 @@
                       <th>Mesero</th>
                       <th>Monto</th>
                       <th>Cliente</th>
-                      <th>Desc. / Carg.</th>
-                      <!--th>ReAbrir</th-->
+                      <th>Acciones de (DESC.)|(CARG.)</th>
+                      
                     </thead>
                   </table>
                 </div>
@@ -110,7 +110,7 @@
                     <thead>
                       <th>Cant</th>
                       <th>Producto</th>
-                      <th>P/U</th>
+                      <th>P.U.</th>
                       <th>Importe</th>
                     </thead>
                   </table>
@@ -129,38 +129,7 @@
                       <div id="dtsPrincipales" class="col-md-4 hidden">
                         <div class="row">
                           <div class="col-md-5">
-                            <label>Forma de Pago</label>
-                            <label class="custom-control custom-radio">
-                              <input type="radio" name="formaPago" value="E" class="custom-control-input">
-                              <span class="custom-control-indicator">Efectivo</span>
-                            </label><br>
-                            <label class="custom-control custom-radio">
-                              <input type="radio" name="formaPago" value="T" class="custom-control-input">
-                              <span class="custom-control-indicator">Tarjeta</span>
-                            </label><br>
-                            <label class="custom-control custom-radio">
-                              <input type="radio" name="formaPago" value="CH" class="custom-control-input">
-                              <span class="custom-control-indicator">Transaccion</span>
-                            </label><br>
-                            <label class="custom-control custom-radio">
-                              <input type="radio" name="formaPago" value="BTC" class="custom-control-input">
-                              <span class="custom-control-indicator">BTC</span>
-                            </label><br>
-                            <label class="custom-control custom-radio">
-                              <input type="radio" name="formaPago" value="CR" class="custom-control-input">
-                              <span class="custom-control-indicator">Credito</span>
-                            </label><br>
-                            <label class="custom-control custom-radio">
-                              <!-- Hugo -->
-                              <input type="radio" name="formaPago" value="H" class="custom-control-input">
-                              <span class="custom-control-indicator">Hugo</span>
-                            </label><br>
-                            <label class="custom-control custom-radio">
-                              <!-- Hugo -->
-                              <input type="radio" name="formaPago" value="Cor" class="custom-control-input">
-                              <span class="custom-control-indicator">Cortesia</span>
-                            </label><br>
-                            <!-- <div class="form-group">
+                            <div class="form-group">
                               <label for="formaPago">Forma de Pago</label>
                               <select  name="formaPago" id="formaPago" class="form-control">
                                 <option value="" disabled selected>Seleccione Forma de Pago...</option>
@@ -170,7 +139,7 @@
                                 <option value="CH">Cheque</option>
                                 <option value="CR">Credito</option>
                               </select>
-                            </div> -->
+                            </div> 
                           </div>
                           <div class="col-md-7">
                             <div class="form-group">
@@ -190,12 +159,6 @@
                                 <input type="radio" name="comprobante" value="O" class="custom-control-input">
                                 <span class="custom-control-indicator"><bold> Otro </bold> </span>
                               </label><br>
-                                <!-- <select  name="comprobante" id="comprobante" class="form-control">
-                                <option value="" disabled selected>Seleccione Tipo Comprobate...</option>
-                                <option value="T" data-subtext="(T)">Ticket</option>
-                                <option value="FCF" data-subtext="(FCF)">Factura Comsumidor Final</option>
-                                <option value="CCF" data-subtext="(CCF)">Comprobante Credito Fiscal</option>
-                              </select> -->
                             </div>
                           </div>
                         </div>
@@ -223,12 +186,7 @@
                             <input  class="form-control" name="nrocomprobanteC" id="nrocomprobanteC" placeholder="Nro Comprobante" autocomplete="off" >
                             <input  class="form-control" name="nrocomprobante" id="nrocomprobante" placeholder="Nro Comprobante" autocomplete="off" >
                           </div>
-                          
-                          
-
-
-
-                          
+      
                           <div class="col-md-3">
                             <label id="lblBuscar" hidden>  NRC o<a href="cliente">&nbsp; registrar </a></label>
                               <input class="form-control" name="Buscar" id="Buscar" placeholder="Buscar por NRC" autocomplete="off" >
@@ -285,6 +243,7 @@
                 </div>
               </div>
             </div>
+            
             <div class="col-md-4">
               <div class="box box-primary">
                 <div class="box-header"><h3 class="box-title">Total Comprobante</h3></div>
@@ -301,15 +260,20 @@
 
                           <label>  Propina </label>
                           <input class="form-control" name="Propina" id="Propina" placeholder="Propina" autocomplete="off"  readonly value ="0.00">
+                          
                           <label>  Exentos </label>
                           <input class="form-control" name="Exentos" id="Exentos" placeholder="Exentos" autocomplete="off"  readonly value ="0.00">
+                          
                           <label>  Retencion </label>
                           <input class="form-control" name="Retencion" id="Retencion" placeholder="Exentos" autocomplete="off"  readonly value ="0.00">
+                          
                           <label>  Total a cobrar </label>
                           <input class="form-control" name="TotalPagar" id="TotalPagar" placeholder="Total a cobrar" autocomplete="off" required readonly value ="0.00">
-                          <label>  Vuelto </label>
+                          
+                          <label>Cambio</label>
                           <input class="form-control" name="vuelto" id="vuelto" placeholder="Vuelto" autocomplete="off" required readonly value=""><br>
-                          <button type="button" id="submitRegistrar" class="btn btn-primary" onclick="pagarFinal()" disabled readonly>Registrar</button>
+                          
+                          <button type="button" id="submitRegistrar" class="btn btn-primary" onclick="pagarFinal()" disabled readonly>Pagar</button>
                         </form>
                       </div>
                     </div>
@@ -357,11 +321,6 @@
   </div>
 </div>
 
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
--->
 <script>
   var TblPedido = '';
   var DetallePedido = '';
