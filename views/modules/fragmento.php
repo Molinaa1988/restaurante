@@ -1,50 +1,6 @@
-<aside class="main-sidebar">
-    <section class="sidebar">
-      <div class="user-panel">
-        <div class="pull-left image">
-          <?php
-            if (($_SESSION["puesto"] == 1)||($_SESSION["puesto"] == 2)||($_SESSION["puesto"] == 3))
-            {
-              echo '<img src="views/dist/img/logo.png" class="img-circle" alt="User Image"/>';
-            } 
-            else if($_SESSION["puesto"] == 4)
-            {
-              echo '<img src="views/dist/img/cajera.png" class="img-circle" alt="User Image">';
-            }
-            else 
-            { 
-              echo '<img src="views/dist/img/mesero.png" class="img-circle" alt="User Image">'; 
-            }
-          ?>
-        </div>
-        <div class="pull-left info">
-          <p>
-            <?php echo $_SESSION['usuario']; ?>
-          </p>
-          <?php
-             $estadoCaja = controllerCaja::ultimoIdCajaCajaChica();
-              $estadoCaja["IdFcaja"];
-              $date = new DateTime($estadoCaja["Fecha"]);
-              $estadoCaja["MontoApertura"];
-              $estadoCaja["Estado"];
-          if($estadoCaja["Estado"] == 'A')
-     { echo '<a href="cierre"><i class="fa fa-circle text-success"></i>OnLine</a>';}
-     else
-     { echo  '<a href="cierre"><i class="fa fa-circle text-danger"></i>OffLine</a>';} ?>
-
-        </div>
-      </div>
-
-      
-      <ul class="sidebar-menu">
-        <li class="header">Navegacion</li>
-
-        <?php if($_SESSION["puesto"] >= 1)  { ?>
-
+<?php if($_SESSION["puesto"] >= 1)  { ?>
           <li class="active"> <a href="inicio"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
           
-          <li class="treeview">
-          <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
           <?php } ?>
 
    <?php if(($_SESSION["puesto"] == 2)) { ?>
