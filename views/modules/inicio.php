@@ -14,13 +14,10 @@ if($_SESSION["puesto"] == 5)
 {
 	echo "window.location='salon'";
 }
-elseif($_SESSION["puesto"] == 4) {
+elseif($_SESSION["puesto"] == 6) {
 	echo "window.location='cocina'";
 }
 
-elseif($_SESSION["puesto"] == 3) {
-	echo "window.location='caja'";
-}
 ?>
 } );
 </script>
@@ -48,7 +45,7 @@ include "views/modules/botonera.php";
 								} 
 								else if($_SESSION["puesto"] == "6")
 								{
-		                        	echo '<img style="max-width: 90%" src="views/dist/img/back.jpg" class="user-image img-responsive"/>';
+		                        	echo '<img style="max-width: 90%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
 		                        }
 		                    ?>
 		                    <div class="">
