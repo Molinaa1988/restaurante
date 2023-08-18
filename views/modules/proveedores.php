@@ -95,6 +95,7 @@ function animatedflash(){
            </div>
        </div>
        <br>
+       
        <!--  Modal registrar-->
                    <div class="modal fade" id="modalRegistrar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                           <form name="form1" method="post" action="">
@@ -102,15 +103,15 @@ function animatedflash(){
                                   <div class="modal-content">
                                       <div class="modal-header">
                                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                          <h3 align="center" class="modal-title" id="myModalLabel">Nuevo proveedor</h3>
+                                          <h3 align="center" class="modal-title" id="myModalLabel">Nuevo Proveedor</h3>
                                       </div>
                                       <div class="panel-body">
                                       <div class="row">
                                           <div class="col-md-6">
-                                            <input class="form-control" name="duiR" placeholder="DUI" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();"><br>
+                                            <input class="form-control" name="duiR" placeholder="00000000-0" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();"><br>
                                           </div>
                                           <div class="col-md-6">
-                                            <input class="form-control" name="nitR" placeholder="NIT" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();">
+                                            <input class="form-control" name="nitR" placeholder="0000-000000-000-0" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();">
                                           </div>
                                           <div class="col-md-12">
                                             <input class="form-control" name="proveedorR" placeholder="Proveedor" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();"><br>
@@ -122,13 +123,13 @@ function animatedflash(){
                                             <input class="form-control" name="direccionR" placeholder="Direccion" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();"><br>
                                           </div>
                                           <div class="col-md-6">
-                                            <input class="form-control" name="contactoR" placeholder="Contacto" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();">
+                                            <input class="form-control" name="contactoR" placeholder="contacto" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();">
                                           </div>
                                           <div class="col-md-6">
-                                            <input class="form-control" name="telefonoR" placeholder="Telefono" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();"><br>
+                                            <input class="form-control" name="telefonoR" placeholder="0000-0000" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();"><br>
                                           </div>
                                           <div class="col-md-6">
-                                            <input class="form-control" name="emailR" placeholder="Emal" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();">
+                                            <input class="form-control" name="emailR" placeholder="correo@gmail.com" autocomplete="off" required onKeyUp="this.value=this.value.toUpperCase();">
                                           </div>
                                           <div class="col-md-6">
                                             <div class="input-group">
