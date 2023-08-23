@@ -13,19 +13,6 @@ include "views/modules/cabezote.php";
 include "views/modules/botonera.php";
 
 ?>
-
-
-<script>
-function imprimir(){
-	var objeto=document.getElementById('imprimeme');  //obtenemos el objeto a imprimir
-	var ventana=window.open('','_blank');  //abrimos una ventana vacía nueva
-	ventana.document.write(objeto.innerHTML);  //imprimimos el HTML del objeto en la nueva ventana
-	ventana.document.close();  //cerramos el documento
-	ventana.print();  //imprimimos la ventana
-	ventana.close();  //cerramos la ventana
-}
-</script>
-
   <div class="content-wrapper">
     <section class="content">
       <div class="row">
@@ -108,6 +95,7 @@ function imprimir(){
       <th>Descripcion</th>
       <th>Precio</th>
       <th>Stock</th>
+      <th>Estado</th>
       <th>Acciones</th>
       </thead>
       <tbody>
