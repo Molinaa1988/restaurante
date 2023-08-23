@@ -117,7 +117,7 @@ class modelInventario{
 	}
 
 		public function borrarInventario($datosModel){
-		$stmt = Conexion::conectar()->prepare("DELETE FROM proveedor WHERE IdItems = :id");
+		$stmt = Conexion::conectar()->prepare("DELETE FROM items WHERE IdItems = :id");
 		$stmt->bindParam(":id", $datosModel, PDO::PARAM_INT);
 		if($stmt->execute()){
 			return "success";
@@ -127,13 +127,7 @@ class modelInventario{
 		}
 		$stmt->close();
 	}
-
-
-
-
-
-
-
+	
 	public function registroIngredientes($datosModel){
 	$stmt = Conexion::conectar()->prepare("INSERT INTO ingredientes (DescripcionIng, UnidadMedida, Cantidad ) 
 											VALUES (:descripcion,:unidad,:cantidad)");

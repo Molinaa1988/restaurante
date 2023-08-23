@@ -98,8 +98,8 @@ echo "No paso nada";
 	}
 
 		public function borrarInventario(){
-	if(isset($_POST["idE"])){
-            $datosController = $_POST["idE"];
+	if(isset($_POST["idPersonalE"])){
+            $datosController = $_POST["idPersonalE"];
 			$respuesta = modelInventario::borrarInventario($datosController);
 			if($respuesta == "success"){
         echo '<script> swal({
