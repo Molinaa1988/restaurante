@@ -102,22 +102,27 @@ class controllerInventario{
 	}
 
 		public function borrarInventario(){
-	if(isset($_POST["idPersonalE"])){
+	if(isset($_POST["idPersonalE"]))
+		{
             $datosController = $_POST["idPersonalE"];
 			$respuesta = modelInventario::borrarInventario($datosController);
-			if($respuesta == "success"){
-        echo '<script> swal({
-      title: "Eliminado",
-      text: "Se elimino exitosamente.",
-      type: "success",
-      showCancelButton: false,
-      confirmButtonColor: "#54c6dd",
-      confirmButtonText: "Ok",
-      closeOnConfirm: false
-    });</script>';
+			if($respuesta == "success")
+			{
+				echo '<script> swal({
+				title: "Eliminado",
+				text: "Se elimino exitosamente.",
+				type: "success",
+				showCancelButton: false,
+				confirmButtonColor: "#54c6dd",
+				confirmButtonText: "Ok",
+				closeOnConfirm: false
+				});
+				</script>';
+				header("location:inventario");
 			}
+		}
 			else{
-			header("location:index.php");
+			header("location:index");
 			}
 		}
 	}
