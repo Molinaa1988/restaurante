@@ -66,9 +66,19 @@ include "views/modules/botonera.php";
                                           </div>
                                           <div class="col-md-6">
                                             <input class="form-control" name="precioR" placeholder="Precio" autocomplete="off" required>
-                                          </div><br>
+                                          </div>
+                                          <br>
+                                          <div class="col-md-12">  
+                                            <div class="input-group">
+                                              <span class="input-group-addon">Estado</span>
+                                              <select class="form-control" name="estadoR" autocomplete="off" required>
+                                                <option value='1'>Activo</option>
+                                                <option value='0'>No Activo</option>
+                                              </select>
+                                            </div>
+                                          </div>  
                                         </div>
-
+                                        
                                       <div class="modal-footer">
                                           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                           <button type="submit" class="btn btn-primary">Guardar</button>
@@ -121,6 +131,17 @@ include "views/modules/botonera.php";
               <td><center><?php echo $item['PrecioVenta'] ?></center></td>
               <td><center><?php echo $item['Stock'] ?></center></td>
               <td>
+                <center>
+                      <?php 
+                        if($item['Estado'] == 1){
+                          echo '<span class="label label-success">Activo</span>';
+                        } else {
+                          echo '<span class="label label-danger">No Activo</span>';
+                        }
+                      ?>
+                    </center>
+              </td>
+              <td>
 
               <div class="btn-group">
                 <button data-toggle="dropdown" class="btn btn-warning btn-sm dropdown-toggle"><i class="fa fa-cog"></i> <span class="caret"></span></button>
@@ -130,6 +151,7 @@ include "views/modules/botonera.php";
                   <li><a href="#" data-toggle="modal" data-target="#ModalEliminar<?php echo $item['IdItems']; ?>"><i class="fa fa-times"></i> Eliminar</a></li>
                 </ul>
               </div>
+              
 
               </td>
           </tr>
@@ -203,6 +225,15 @@ include "views/modules/botonera.php";
                       </div>
                       <div class="col-md-6">
                         <input class="form-control" name="stockA" placeholder="stockA" autocomplete="off" required value="<?php echo $item['Stock']; ?>"><br>
+                      </div>
+                      <div class="col-md-12">  
+                        <div class="input-group">
+                          <span class="input-group-addon">Estado</span>
+                          <select class="form-control" name="estadoA" autocomplete="off" required>
+                            <option value='1'>Activo</option>
+                            <option value='0'>No Activo</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                     </div>

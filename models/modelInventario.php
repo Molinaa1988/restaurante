@@ -5,13 +5,14 @@ require_once "conexion.php";
 class modelInventario{
 
 		public function registroInventario($datosModel){
-		$stmt = Conexion::conectar()->prepare("INSERT INTO items (IdTipoItem, IdFamilia, IdCategoria,PrecioVenta,Stock,Descripcion) VALUES (:tipoitem,:familia,:idcategoria,:precio,:stock,:descripcion)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO items (IdTipoItem, IdFamilia, IdCategoria,PrecioVenta,Stock,Descripcion,Estado) VALUES (:tipoitem,:familia,:idcategoria,:precio,:stock,:descripcion,:estadoR)");
 		$stmt->bindParam(":tipoitem", $datosModel["tipoitem"], PDO::PARAM_STR);
 		$stmt->bindParam(":familia", $datosModel["familia"], PDO::PARAM_STR);
 		$stmt->bindParam(":idcategoria", $datosModel["idcategoria"], PDO::PARAM_STR);
 		$stmt->bindParam(":precio", $datosModel["precio"], PDO::PARAM_STR);
 		$stmt->bindParam(":stock", $datosModel["stock"], PDO::PARAM_STR);
 		$stmt->bindParam(":descripcion", $datosModel["descripcion"], PDO::PARAM_STR);
+		$stmt->bindParam(":estadoR", $datosModel["Estado"], PDO::PARAM_STR);
 		if($stmt->execute()){
 			return "success";
 		}
@@ -22,12 +23,13 @@ class modelInventario{
 	}
 
 	public function actualizarInventario($datosModel){
-	$stmt = Conexion::conectar()->prepare("UPDATE items SET IdCategoria = :idcategoria, PrecioVenta = :precio, Stock = :stock, Descripcion = :descripcion WHERE IdItems = :id");
-	$stmt->bindParam(":id", $datosModel["id"], PDO::PARAM_STR);
+		$stmt = Conexion::conectar()->prepare("UPDATE items SET IdCategoria = :idcategoria, PrecioVenta = :precio, Stock = :stock, Descripcion = :descripcion, Estado = :estadoA WHERE IdItems = :id");
+		$stmt->bindParam(":id", $datosModel["id"], PDO::PARAM_STR);
 	$stmt->bindParam(":idcategoria", $datosModel["idcategoria"], PDO::PARAM_STR);
 	$stmt->bindParam(":precio", $datosModel["precio"], PDO::PARAM_STR);
 	$stmt->bindParam(":stock", $datosModel["stock"], PDO::PARAM_STR);
 	$stmt->bindParam(":descripcion", $datosModel["descripcion"], PDO::PARAM_STR);
+	$stmt->bindParam(":estadoA", $datosModel["Estado"], PDO::PARAM_STR);
 	if($stmt->execute()){
 		return "success";
 	}
@@ -127,7 +129,7 @@ class modelInventario{
 		}
 		$stmt->close();
 	}
-	
+
 	public function registroIngredientes($datosModel){
 	$stmt = Conexion::conectar()->prepare("INSERT INTO ingredientes (DescripcionIng, UnidadMedida, Cantidad ) 
 											VALUES (:descripcion,:unidad,:cantidad)");

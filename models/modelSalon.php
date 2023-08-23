@@ -186,7 +186,11 @@ class modelSalon{
     $stmt->null;
   }
   public function ListadoPlatos($idCategoria){
-    $stmt = Conexion::conectar()->prepare("SELECT i.IdItems as IdItems, i.PrecioVenta as PrecioVenta, i.Descripcion as Descripcion, c.FormaDePreparar as FormaDePreparar from items i inner join categoria c on i.IdCategoria = c.IdCategoria where i.IdCategoria=:id and i.Descripcion != 'Descuento' and i.Descripcion !='Cargo' and i.Descripcion !='Cupon' ORDER BY i.Descripcion ASC");
+    $stmt = Conexion::conectar()->prepare("SELECT i.IdItems as IdItems, i.PrecioVenta as PrecioVenta, i.Descripcion as Descripcion, c.FormaDePreparar as FormaDePreparar 
+	from items i 
+	inner join categoria c on i.IdCategoria = c.IdCategoria 
+	where i.IdCategoria=:id and i.Descripcion != 'Descuento' and i.Descripcion !='Cargo' and i.Descripcion !='Cupon' AND i.Estado = '1' 
+	ORDER BY i.Descripcion ASC");
     $stmt->bindParam(":id", $idCategoria, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->fetchAll();

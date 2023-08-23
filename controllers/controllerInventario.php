@@ -7,32 +7,35 @@ class controllerInventario{
 
 		if(isset($_POST["precioR"])){
 			$datosController = array("idcategoria"=>$_POST["idcategoriaR"],
-								      "precio"=>$_POST["precioR"],
-                      "stock"=>$_POST["stockR"],
-                      "descripcion"=>$_POST["descripcionR"],
-										  "tipoitem"=>$_POST["tipoitemR"],
-									    "familia"=>$_POST["familiaR"]);
+								     "precio"=>$_POST["precioR"],
+                      				 "stock"=>$_POST["stockR"],
+                      				 "descripcion"=>$_POST["descripcionR"],
+									 "tipoitem"=>$_POST["tipoitemR"],
+									 "familia"=>$_POST["familiaR"],
+									 "Estado"=>$_POST["estadoR"]);
 			$respuesta = modelInventario::registroInventario($datosController);
 			if($respuesta == "success"){
         echo '<script>
-
-        swal({
-          title: "Registrado",
-          text: "Se registro exitosamente",
-          type: "success",
-          showCancelButton: false,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-            confirmButtonText: "Ok"
-        }).then(function () {
-        location = location;
-        });
-
-    </script>';
-
+			swal(
+			{
+					title: "Registrado",
+					text: "Se registro exitosamente",
+					type: "success",
+					showCancelButton: false,
+					confirmButtonColor: "#3085d6",
+					cancelButtonColor: "#d33",
+						confirmButtonText: "Ok"
+				}
+				).then(function () 
+				{
+						location = location;
+				}
+					);
+    		</script>';
 			}
-			else{
-echo "No paso nada";
+			else
+			{
+				echo "No paso nada";
 			}
 		}
 	}
@@ -47,8 +50,8 @@ echo "No paso nada";
 											"idcategoria"=>$_POST["idcategoriaA"],
 											"precio"=>$_POST["precioA"],
 											"stock"=>$_POST["stockA"],
-											"descripcion"=>$_POST["descripcionA"]);
-
+											"descripcion"=>$_POST["descripcionA"],
+											"Estado"=>$_POST["estadoA"]);
 		$respuesta = modelInventario::actualizarInventario($datosController);
 			if($respuesta == "success"){
 				echo '<script> swal({
@@ -60,6 +63,7 @@ echo "No paso nada";
 			confirmButtonText: "Ok",
 			closeOnConfirm: false
 		});</script>';
+			header("location:inventario");
 		}
 		else{
 		// header("location:index.php");
