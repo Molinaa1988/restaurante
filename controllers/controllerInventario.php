@@ -101,8 +101,9 @@ class controllerInventario{
 	    return $respuesta;
 	}
 
-		public function borrarInventario(){
-	if(isset($_POST["idPersonalE"]))
+	public function borrarInventario()
+	{
+		if(isset($_POST["idPersonalE"]))
 		{
             $datosController = $_POST["idPersonalE"];
 			$respuesta = modelInventario::borrarInventario($datosController);
@@ -121,11 +122,11 @@ class controllerInventario{
 				header("location:inventario");
 			}
 		}
-			else{
+			else
+			{
 			header("location:index");
 			}
 		}
-	}
 
 
 
