@@ -160,7 +160,7 @@ class modelSalon{
 	// Fin de Funciones Nahum Cruz
 
   public function ListadoMeseros(){
-    $stmt = Conexion::conectar()->prepare("SELECT IdPersonal, Nombres from personal where IdCargo = 5 and Estado = 'A'");
+    $stmt = Conexion::conectar()->prepare("SELECT IdPersonal, Nombres from personal where IdCargo = 5 and Estado = '1'");
     $stmt->execute();
     return $stmt->fetchAll();
     $stmt->null;

@@ -106,7 +106,6 @@
 								<tr class="odd gradeX">
 									<td style="width:90%;">
 										<label>Destino</label>
-										<!-- <input id="mesaDestino" type="number" class="form-control" name="mesa2" placeholder="Mesa destino" autocomplete="off" required> -->
 										<select id="mesaDestino" name="mesa2" class="form-control selectpicker" data-style="btn-default" data-size="15">
 
 										</select>

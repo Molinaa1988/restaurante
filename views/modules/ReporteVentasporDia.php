@@ -83,28 +83,13 @@
 										<strong>Consultar</strong>
 									</button>
 								</div>
-								
-			                    <!-- parece que no funciona 
-			                    <div class="col-md-2">
-			                        <button onclick="OpenPdf('PxEmpleado');" class="btn btn-primary btn-block">
-										<i class=" fa fa-file-pdf-o "></i> Propina x Empleado
-									</button>
-									
-								</div>-->
-								
+
 								<div class="col-xs-6 col-sm-2" align="center"><br>
 			                    	<button onclick="OpenPdf('RSD');" class="btn btn-primary btn-block">
 										<i class=" fa fa-file-pdf-o "></i>  PDF
 									</button>
 								</div>
-						
-						<!-- boton nuevo para descontar ingredientes 
-									<div class="col-md-2">
-			                        <a href='ReporteItemsPorDia' class="btn btn-primary btn-block">
-										<i class=" fa fa-cutlery "></i> Items por día
-									</a>
-								</div> -->
-						
+					
 								<div class="col-xs-6 col-sm-2" align="center"><br>
 			                    	 <button onclick="OpenPdf('Z');" class="btn btn-icon waves-effect waves-light btn-primary m-b-5 btn-block">
 										<i class=" fa fa-file-pdf-o "></i>  Corte Z
@@ -396,40 +381,40 @@
 													</tr>
 											<?php } ?>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Efectivo</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($totalEfectivo); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($propinaEfectivo); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($netoEfectivo); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Efectivo</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($totalEfectivo); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($propinaEfectivo); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($netoEfectivo); ?></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Tarjeta</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($totalTarjeta); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($propinaTarjeta); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($netoTarjeta); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Tarjeta</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($totalTarjeta); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($propinaTarjeta); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($netoTarjeta); ?></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Transaccion</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($totalCheque); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($propinaCheque); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($netoCheque); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Transaccion</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($totalCheque); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($propinaCheque); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($netoCheque); ?></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total BTC</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($totalBTC); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($propinaBTC); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($netoBTC); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total BTC</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($totalBTC); ?></h4></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($propinaBTC); ?></h4></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($netoBTC); ?></h4></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Créditos</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($totalET); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($propinaET); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($netoET); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Créditos</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($totalET); ?></h4></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($propinaET); ?></h4></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($netoET); ?></h4></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total General</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($total); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($propina); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($neto); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total General</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($total); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($propina); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($neto); ?></strong></div></td>
 											</tr>
 										</tbody>
 			                        </table>
