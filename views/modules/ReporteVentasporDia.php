@@ -452,8 +452,8 @@
 
 											<?php } ?>
 											<tr>
-												<td colspan="3"><div align="right"><strong><h4>Total</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($Totalcxcc); ?></h4></strong></div></td>
+												<td colspan="3"><div align="right"><strong>Total</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($Totalcxcc); ?></strong></div></td>
 											</tr>
 										</tbody>
 									</table>
@@ -593,34 +593,34 @@
 												</tr>
 											<?php } ?>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Compra Efectivo</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($SubtotalEfectivoCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($IvaEfectivoCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($TotalEfectivoCompra); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Compra Efectivo</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($SubtotalEfectivoCompra);?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($IvaEfectivoCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($TotalEfectivoCompra); ?></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Compra Cheque</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($SubtotalChequeCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($IvaChequeCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($TotalChequeCompra); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Compra Cheque</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($SubtotalChequeCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($IvaChequeCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($TotalChequeCompra); ?></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Compra Deposito</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($SubtotalDepositoCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($IvaDepositoCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($TotalDepositoCompra); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Compra Deposito</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($SubtotalDepositoCompra); ?><</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($IvaDepositoCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($TotalDepositoCompra); ?></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Compra Tarjeta</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($SubtotalTarjetaCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($IvaTarjetaCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($TotalTarjetaCompra); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Compra Tarjeta</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($SubtotalTarjetaCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($IvaTarjetaCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($TotalTarjetaCompra); ?></strong></div></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div align="right"><strong><h4>Total Compra General</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($SubtotalCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($IvaCompra); ?></h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($TotalCompra); ?></h4></strong></div></td>
+												<td colspan="6"><div align="right"><strong>Total Compra General</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($SubtotalCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($IvaCompra); ?></strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($TotalCompra); ?></strong></div></td>
 											</tr>
 										</tbody>
 									</table>
@@ -646,13 +646,13 @@
 														$TotalGasto=$TotalGasto+$item['Monto'];
 											?>
 														<tr class="odd gradeX">
-															<td><center><?php echo $item['Descripcion'] ?></center></td>
+															<td align="center"><?php echo $item['Descripcion'] ?></center></td>
 															<td><center><?php echo $item['Monto'] ?></center></td>
 														</tr>
 											<?php } ?>
 											<tr>
-												<td colspan="1"><div align="right"><strong><h4>Total Gasto</h4></strong></div></td>
-												<td><div align="center"><strong><h4>$ <?php echo ($TotalGasto); ?></h4></strong></div></td>
+												<td colspan="1"><div align="right"><strong>Total Gasto</strong></div></td>
+												<td><div align="center"><strong>$ <?php echo ($TotalGasto); ?></strong></div></td>
 											</tr>
 										</tbody>
 									</table>
