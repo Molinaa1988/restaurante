@@ -35,7 +35,7 @@ class controllerInventario{
 			}
 			else
 			{
-				echo "No paso nada";
+				echo "error";
 			}
 		}
 	}
@@ -66,8 +66,7 @@ class controllerInventario{
 			header("location:inventario");
 		}
 		else{
-		// header("location:index.php");
-
+			echo "error";
 		}
 	}
 	
@@ -103,8 +102,7 @@ class controllerInventario{
 
 	public function borrarInventario()
 	{
-		if(isset($_POST["idPersonalE"]))
-		{
+		if(isset($_POST["idPersonalE"])) {
             $datosController = $_POST["idPersonalE"];
 			$respuesta = modelInventario::borrarInventario($datosController);
 			if($respuesta == "success")
@@ -121,12 +119,10 @@ class controllerInventario{
 				</script>';
 				header("location:inventario");
 			}
+		} else {
+			echo "error";
 		}
-			else
-			{
-			header("location:index");
-			}
-		}
+	}
 
 
 
