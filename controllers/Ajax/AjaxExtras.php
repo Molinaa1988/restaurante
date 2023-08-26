@@ -16,7 +16,6 @@ if (isset($_POST['AccionAjax'])) {
     $Mesa = modelSalon::DetalleMesaxPedido($Data['IdPedido']);
     modelRealizarVenta::UpEstadoMesa($Mesa);
     modelExtras::DelComprobanteC($Data);
-    modelExtras::DelComprobante($Data);
     modelExtras::UpPedido($Data);
     echo json_encode($Mesa);
   }elseif ($Accion === 'Permiso') {

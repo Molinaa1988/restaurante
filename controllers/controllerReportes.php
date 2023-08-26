@@ -168,34 +168,40 @@ class controllerReportes{
         $respuesta = modelReportes::ReporteCortesias($fecha1, $fecha2);
         return $respuesta;
     }
-
+    
+    
     //22.1
     function ReporVenDiaIdPed($x){
         $respuesta = modelReportes::ReporVenDiaIdPed($x);
         return $respuesta;
-
+        
     }
-
+    
     //23
     function ReporteIngredientes($x){
         $respuesta = modelReportes::ReporteIngredientes($x);
         return $respuesta;
-
+        
     }
-
+    
     //24
     function ReporteItemsPorDia($x){
         $respuesta = modelReportes::ReporteItemsPorDia($x);
         return $respuesta;
     }
-
+    
     //25 para el nombre del plato
     function ReporNomItem($x){
         $respuesta = modelReportes::ReporNomItem($x);
         return $respuesta;
     }
-
-
+    
+    //26
+    function ReporteEliminados($fecha1,$fecha2){
+        $respuesta = modelReportes::ReporteEliminados($fecha1, $fecha2);
+        return $respuesta;
+    }
+    
 
 
 

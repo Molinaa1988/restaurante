@@ -103,6 +103,7 @@
               <li><a href="ReporteBebidasmasVendidas">Bebidas mas Vendidas</a></li>
               <li><a href="ReporteCuentasporcobrar">Cuentas por cobrar</a></li>
               <li><a href="ReporteCortesias">Cortesías</a></li>
+              <li><a href="ReporteEliminados">Eliminados</a></li>
             </ul>
           </li>
         <?php } ?>

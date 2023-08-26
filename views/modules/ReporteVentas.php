@@ -351,9 +351,9 @@ include "views/modules/botonera.php";
 																				<td><div align="center"><strong>$ <?php echo ($netoET); ?></strong></div></td>
 																	</tr>
 																		<tr>
-																				<td colspan="6"><div align="right"><strong><h4>Total General</strong></div></td>
+																				<td colspan="6"><div align="right"><strong>Total General</strong></div></td>
 																				<td><div align="center"><strong>$ <?php echo ($total); ?></strong></div></td>
-																				<td><div align="center"><strong>$ <?php echo ($propina); ?></strong></div></td>
+																				<td><div align="center"><st   rong>$ <?php echo ($propina); ?></strong></div></td>
 																				<td><div align="center"><strong>$ <?php echo ($neto); ?></strong></div></td>
 																	 </tr>
 																 </tbody>

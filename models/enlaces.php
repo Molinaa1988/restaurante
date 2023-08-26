@@ -61,7 +61,8 @@ class EnlacesModels{
 			 $enlaces == "ReporteCuentasporpagarpendientes" ||
 			 $enlaces == "ReporteCuentasporpagarsolventes" ||
 			 $enlaces == "ReporteTickets" ||
- 			 $enlaces == "ReporteCortesias")
+ 			 $enlaces == "ReporteCortesias" || 
+			 $enlaces == "ReporteEliminados")
 			 {
 			$module = "views/modules/".$enlaces.".php";
 		}

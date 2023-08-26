@@ -47,22 +47,11 @@ class modelExtras{
     }
     $stmt->close();
   }
-
+  /*DELETE  FROM comprobantec  WHERE IdPedido = :IdPedido
+  DELETE  FROM comprobante  WHERE IdPedido = :IdPedido*/
   public function DelComprobanteC($Dts)
   {
-    $stmt = Conexion::conectar()->prepare("DELETE  FROM comprobantec  WHERE IdPedido = :IdPedido");
-    $stmt->bindParam(":IdPedido", $Dts['IdPedido'], PDO::PARAM_STR);
-    if($stmt->execute()){
-      return "success";
-    }else{
-      return "error";
-    }
-    $stmt->close();
-  }
-
-  public function DelComprobante($Dts)
-  {
-    $stmt = Conexion::conectar()->prepare("DELETE  FROM comprobante  WHERE IdPedido = :IdPedido");
+    $stmt = Conexion::conectar()->prepare("UPDATE detallepedido SET Estado = 'X' WHERE IdPedido = :IdPedido");
     $stmt->bindParam(":IdPedido", $Dts['IdPedido'], PDO::PARAM_STR);
     if($stmt->execute()){
       return "success";
