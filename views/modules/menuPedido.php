@@ -332,34 +332,12 @@
 									<option style="font-size: 20px;" value="Veg. Asado">Veg. Asado</option>
 									<option style="font-size: 20px;" value="Veg. Vapor">Veg. Vapor</option>
 									<option style="font-size: 20px;" value="Veg. Salteados">Veg. Salteados</option>
-									<!-- <option style="font-size: 20px;" value="Frijoles">Frijoles</option>
-									<option style="font-size: 20px;" value="Arroz">Arroz</option>
-									<option style="font-size: 20px;" value="Chorizo">Chorizo</option> -->
 									<option style="font-size: 20px;" value="Papa al horno">Papa al horno</option>
 									<option style="font-size: 20px;" value="Papa salteada">Papa salteada</option>
-									<!-- <option style="font-size: 20px;" value="Pure de papa">Pure de papa</option>
-									<option style="font-size: 20px;" value="Ensalda de papa">Ensalda de papa</option>
-									<option style="font-size: 20px;" value="Aguacate">Aguacate</option>
-									<option style="font-size: 20px;" value="Queso">Queso</option>
-									<option style="font-size: 20px;" value="Crema">Crema</option>
-									<option style="font-size: 20px;" value="Contorno tipico">Contorno tipico</option>
-									<option style="font-size: 20px;" value="Chimichurri">Chimichurri</option>
-									<option style="font-size: 20px;" value="Chile toreado">Chile toreado</option> -->
 									<option style="font-size: 20px;" value="Tortilla frita">Tortilla frita</option>
 									<option style="font-size: 20px;" value="Tortilla">Tortilla</option>
-									<!-- <option style="font-size: 20px;" value="Enredo">Enredo</option> -->
 									<option style="font-size: 20px;" value="Pan con Ajo">Pan con Ajo</option>
 									<option style="font-size: 20px;" value="Pan sin Ajo">Pan sin Ajo</option>
-									<!-- <option style="font-size: 20px;" value="Leche">Leche</option>
-									<option style="font-size: 20px;" value="Chimol">Chimol</option>
-									<option style="font-size: 20px;" value="Salsa Rosada">Salsa Rosada</option>
-									<option style="font-size: 20px;" value="Limon">Limon</option>
-									<option style="font-size: 20px;" value="Cebolla Curtida">Cebolla Curtida</option>
-									<option style="font-size: 20px;" value="Ensalada Fresca">Ensalada Fresca</option>
-									<option style="font-size: 20px;" value="Salsa jalapeña">Salsa jalapeña</option>
-									<option style="font-size: 20px;" value="Tocino">Tocino</option>
-									<option style="font-size: 20px;" value="Camaron  Jumbo Unidad">Camaron  Jumbo Unidad</option>
-									<option style="font-size: 20px;" value="Langosta 1/2 Plato Super">Langosta 1/2 Plato Super</option> -->
 								</select>
 							</div>
 						</div>
@@ -683,6 +661,28 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script charset="UTF-8">
 
 	$(document).ready(function() {
@@ -804,7 +804,7 @@
 								<b>${data.Nombre}</b>
 							</h4>
 						</div>
-						<div id="collapse${data.IdCategoria}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading${data.IdCategoria}">
+						<div id="collapse${data.IdCategoria}" class="panel-collapse000 collapse" role="tabpanel" aria-labelledby="heading${data.IdCategoria}">
 							<div class="panel-body">
 								${Btn}
 							</div>

@@ -603,5 +603,4 @@ public function verificarAutorizacion($datosModel){
 	$stmt->null;
 }
 
-
 }

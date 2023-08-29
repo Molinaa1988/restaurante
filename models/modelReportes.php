@@ -638,12 +638,12 @@ class modelReportes{
                                               INNER JOIN items i ON i.IdItems = dp.IdItems
                                               INNER JOIN personal pe ON pe.IdPersonal = p.IdPersonal
                                               WHERE CAST(p.FechaPedido AS DATE ) BETWEEN :fecha1 AND :fecha2
-                                              AND p.Estado = 'X'  ");
+                                              AND p.Estado = 'X'");
       $stmt -> bindParam(":fecha1", $Fecha1, PDO::PARAM_STR);
       $stmt -> bindParam(":fecha2", $Fecha2, PDO::PARAM_STR);
       $stmt -> execute();
       return $stmt -> fetchAll();
       $stmt -> null;
     }
-
 }
+

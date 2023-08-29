@@ -89,10 +89,10 @@
      
 
     $respuesta = controllerReportes::ReporteEliminados($fechai,$fechaf);
+    
     //var_dump($respuesta);
-   
     foreach($respuesta as $row => $item){
-
+        
        
        // $total=$total+$item['Total'];
       
@@ -110,7 +110,7 @@
         <td><center> <?php echo $item['Descripcion'] ?></center></td>
         <td><center> <?php echo $item['Cantidad'] ?></center></td>
         <td><center>$ <?php echo $item['Precio'] ?></center></td>
-        <td><center> <?php echo $item['Cambios'] ?></center></td>
+        <td><center> <?php echo $item['Cambios'] ?></ce nter></td>
         
     </tr>
 
