@@ -181,6 +181,7 @@
 		</div>
 	</form>
 </div>
+
 <script>
 
 	$(document).ready(function() {
@@ -246,7 +247,68 @@
 			kb.reveal();
 		}
 	});
+	function CredencialUser(id) {
+		
+		swal.setDefaults({
+		confirmButtonText: 'Continuar &rarr;',
+		showCancelButton: true,
+		reverseButtons: true,
+		allowOutsideClick: false,
+		allowEscapeKey: false,
+		cancelButtonText: 'Cancelar',
+		progressSteps: ['1']
+		})
 
+		var steps = [
+			{
+				input: 'password',
+				title: 'Ingrese Codigo de Empleado',
+				html: '<i class="fa fa-unlock fa-3x"></i>',
+				inputPlaceholder: '******',
+				inputAttributes: {
+					autocomplete: 'off'
+				}
+			}
+		]
+
+		swal.queue(steps).then(function (password) {
+			swal.resetDefaults();
+			if (password[0] == "") {
+				CredencialUser(id);
+			}else{
+				$.ajax({
+					url:"controllers/Ajax/AjaxExtras.php",
+				  	method:"POST",
+				  	data:{AccionAjax:'Permiso', DtsAjax:password[0]},
+				  	dataType:"text",
+					beforeSend:function() {
+						swal({
+							title: '<strong>Menu Pedido</strong>',
+							html: 'Verificando Permiso...',
+							allowOutsideClick: false,
+							onBeforeOpen: () => {
+								swal.showLoading();
+							}
+				}, 1000);
+					},success: function (hmtl)	{
+						setTimeout(() => {
+			        		swal.close();
+							if (hmtl == "1") {
+								crearPedido(id);
+							}
+						},3000).then((result) =>{
+								swal('Menu Pedido', 'Acceso Denegado', 'error',)
+								console.log(result);
+							}).catch((err) =>{
+								if(err != 'cancel'){
+									console.error(err);
+							}
+							});
+				}	
+			});
+		}
+	}
+						
 	function dataOption() {
 		$.ajax({
     		url : 'controllers/Ajax/AjaxSalon.php', // la URL para la petición

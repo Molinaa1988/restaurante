@@ -68,55 +68,40 @@
 <div style="width:100%; height:700px; margin-top: 50px; overflow: auto;" > <br>
 <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover"  width="100%"  border="0">
-    <thead>
+    
+<thead>
     <tr>
         
         <th><center>Pedido</center></th>
-        <th><center>Personal</<center></th>
         <th><center>Producto</center></th>
         <th><center>Cantidad</center></th>
         <th><center>Precio</center></th>
         <th><center>Fecha</center></th>
         <th><center>Eliminado por </center></th>
+        <th><center>Motivo</center></th>
     </tr>
-    </thead>
+</thead>
+
 <tbody>
-
-
-
-<?php
-
-     
-
-    $respuesta = controllerReportes::ReporteEliminados($fechai,$fechaf);
-    
-    //var_dump($respuesta);
-    foreach($respuesta as $row => $item){
-        
-       
-       // $total=$total+$item['Total'];
-      
+    <?php
+        $respuesta = controllerReportes::ReporteEliminados($fechai,$fechaf);    
+        foreach($respuesta as $row => $item)
+        {   
+        // $total=$total+$item['Total'];
     ?>
-
-
-    <tr class="odd gradeX">
-		</div></td>
-           
-		</td>
-		</td>
-        
-        <td><center> <?php echo $item['IdPedido']?> </center></td>
-        <td><center> <?php echo $item['Nombres'] ?></center></td>
-        <td><center> <?php echo $item['Descripcion'] ?></center></td>
-        <td><center> <?php echo $item['Cantidad'] ?></center></td>
-        <td><center>$ <?php echo $item['Precio'] ?></center></td>
-        <td><center> <?php echo $item['Cambios'] ?></ce nter></td>
-        
-    </tr>
-
-
-    
- <?php   } ?>
+        <tr class="odd gradeX">
+            </div>
+            <td><center> <?php echo $item['IdPedido']?> </center></td>
+            <td><center> <?php echo $item['Descripcion'] ?></center></td>
+            <td><center> <?php echo $item['Cantidad'] ?></center></td>
+            <td><center>$ <?php echo $item['Precio'] ?></center></td>
+            <td><center> <?php echo $item['Cambios'] ?></ce nter></td>
+            <td><center> <?php echo $item['Nombres'] ?></center></td>
+            <td><center></center></td>
+        </tr>
+    <?php   
+        } 
+    ?>
  <!-- <tr>
         
         <td colspan="3"><div align="right"><strong><h4>Total General</h4></strong></div></td>

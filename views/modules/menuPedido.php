@@ -597,7 +597,6 @@
 				<h4 class="modal-title" id="gridSystemModalLabel"><span>Separa Cuenta</span></h4>
 			</div>
 			<div class="modal-body">
-				<!-- <div class="container"> -->
 					<div class="row">
 						<div class="col-md-8 col-md-offset-1">
 							<b><span style="font-size: 40px;" data-DtPedido="0" id="IdItems"></span></b>
@@ -621,7 +620,6 @@
 							<button type="button" id="BtnSaveTrasladado" onClick="trasladar()" class="btn btn-primary btn-lg btn-block" style="font-size: 30px;" disabled><b><i class="fa fa-exchange" aria-hidden="true"></i> Trasladar</b></button>
 						</div>
 					</div>
-				<!-- </div> -->
 			</div>
 		</div>
 	</div>
