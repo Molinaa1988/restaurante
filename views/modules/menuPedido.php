@@ -171,7 +171,7 @@
 												<div class="panel-body">
 													<div class="btn-group" data-toggle="buttons">
 														<label id="lblPropina" class="btn btn-md btn-default active">
-															<input type="checkbox" id="PropinaId" onChange="getDetalleFactura()" checked> Propina
+															<input type="checkbox" id="PropinaId" onChange="getDetalleFactura()"> Propina
 														</label>
 														<label id="lblExento" class="btn btn-md btn-primary">
 															<input type="checkbox" id="ExentosId" onChange="getDetalleFactura()"> Exentos
@@ -332,12 +332,34 @@
 									<option style="font-size: 20px;" value="Veg. Asado">Veg. Asado</option>
 									<option style="font-size: 20px;" value="Veg. Vapor">Veg. Vapor</option>
 									<option style="font-size: 20px;" value="Veg. Salteados">Veg. Salteados</option>
+									<!-- <option style="font-size: 20px;" value="Frijoles">Frijoles</option>
+									<option style="font-size: 20px;" value="Arroz">Arroz</option>
+									<option style="font-size: 20px;" value="Chorizo">Chorizo</option> -->
 									<option style="font-size: 20px;" value="Papa al horno">Papa al horno</option>
 									<option style="font-size: 20px;" value="Papa salteada">Papa salteada</option>
+									<!-- <option style="font-size: 20px;" value="Pure de papa">Pure de papa</option>
+									<option style="font-size: 20px;" value="Ensalda de papa">Ensalda de papa</option>
+									<option style="font-size: 20px;" value="Aguacate">Aguacate</option>
+									<option style="font-size: 20px;" value="Queso">Queso</option>
+									<option style="font-size: 20px;" value="Crema">Crema</option>
+									<option style="font-size: 20px;" value="Contorno tipico">Contorno tipico</option>
+									<option style="font-size: 20px;" value="Chimichurri">Chimichurri</option>
+									<option style="font-size: 20px;" value="Chile toreado">Chile toreado</option> -->
 									<option style="font-size: 20px;" value="Tortilla frita">Tortilla frita</option>
 									<option style="font-size: 20px;" value="Tortilla">Tortilla</option>
+									<!-- <option style="font-size: 20px;" value="Enredo">Enredo</option> -->
 									<option style="font-size: 20px;" value="Pan con Ajo">Pan con Ajo</option>
 									<option style="font-size: 20px;" value="Pan sin Ajo">Pan sin Ajo</option>
+									<!-- <option style="font-size: 20px;" value="Leche">Leche</option>
+									<option style="font-size: 20px;" value="Chimol">Chimol</option>
+									<option style="font-size: 20px;" value="Salsa Rosada">Salsa Rosada</option>
+									<option style="font-size: 20px;" value="Limon">Limon</option>
+									<option style="font-size: 20px;" value="Cebolla Curtida">Cebolla Curtida</option>
+									<option style="font-size: 20px;" value="Ensalada Fresca">Ensalada Fresca</option>
+									<option style="font-size: 20px;" value="Salsa jalapeña">Salsa jalapeña</option>
+									<option style="font-size: 20px;" value="Tocino">Tocino</option>
+									<option style="font-size: 20px;" value="Camaron  Jumbo Unidad">Camaron  Jumbo Unidad</option>
+									<option style="font-size: 20px;" value="Langosta 1/2 Plato Super">Langosta 1/2 Plato Super</option> -->
 								</select>
 							</div>
 						</div>
@@ -597,6 +619,7 @@
 				<h4 class="modal-title" id="gridSystemModalLabel"><span>Separa Cuenta</span></h4>
 			</div>
 			<div class="modal-body">
+				<!-- <div class="container"> -->
 					<div class="row">
 						<div class="col-md-8 col-md-offset-1">
 							<b><span style="font-size: 40px;" data-DtPedido="0" id="IdItems"></span></b>
@@ -620,6 +643,7 @@
 							<button type="button" id="BtnSaveTrasladado" onClick="trasladar()" class="btn btn-primary btn-lg btn-block" style="font-size: 30px;" disabled><b><i class="fa fa-exchange" aria-hidden="true"></i> Trasladar</b></button>
 						</div>
 					</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
@@ -657,28 +681,6 @@
 		</div>
 	</form>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <script charset="UTF-8">
@@ -802,7 +804,7 @@
 								<b>${data.Nombre}</b>
 							</h4>
 						</div>
-						<div id="collapse${data.IdCategoria}" class="panel-collapse000 collapse" role="tabpanel" aria-labelledby="heading${data.IdCategoria}">
+						<div id="collapse${data.IdCategoria}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading${data.IdCategoria}">
 							<div class="panel-body">
 								${Btn}
 							</div>
@@ -1125,9 +1127,9 @@
 			dataType : 'json', // el tipo de información que se espera de respuesta
 			success : function(json) {
 				// console.log(json);
-				if(json.Bebidas > 0  ){
+				if(json.Bebidas >= 0  ){
 					printer(<?php echo $idPedido ?> , '<?php echo  $Mesero['Nombres'];  ?>' , <?php echo $Mesa["NroMesa"]; ?>);
-					//window.open('controllers/Ajax/AjaxImprimirPDF.php?IdPedidoBar=<?php echo $idPedido ?>&mesero=<?php echo  $Mesero['Nombres'];  ?>&NroMesa=<?php echo $Mesa["NroMesa"]; ?>','_blank');
+					window.open('controllers/Ajax/AjaxImprimirPDF.php?IdPedidoBar=<?php echo $idPedido ?>&mesero=<?php echo  $Mesero['Nombres'];  ?>&NroMesa=<?php echo $Mesa["NroMesa"]; ?>','_blank');
 
 				}
 			},
@@ -1308,7 +1310,7 @@
 		url += '&comensales='+Comensales;
 
 		printerPC(Subtotal, idPedido, Total, Propina, Exento, Retencion, Mesa, Mesero, Naturaleza, NumeroCuentas, Cliente, Comensales);
-		//window.open(url, '_blank');
+		window.open(url, '_blank');
 
 		if(NumeroCuentas == 1){
 			window.location.assign("salon")
@@ -1329,8 +1331,6 @@
         }
       })
 	}
-
-	
 
 	function editMensaje(mensaje, Cant, Id) {
 		// console.log(mensaje);
@@ -1607,8 +1607,6 @@
 								}else{
 									eliminarPedido(idPedido, status);
 								}
-							}else{
-								swal('Menu Pedido', 'Acceso Denegado', 'error',)
 							}
 						}, 3000);
 						console.log('OK')
