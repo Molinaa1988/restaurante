@@ -136,18 +136,18 @@
 												<b><i class="fa fa-cutlery fa-2x"></i><br>Enviar a Cocina</b>
 											</button>
 										</div>
-										<?php if($_SESSION["puesto"] == 1) { ?>
+										<?php if($_SESSION["puesto"] == 2) { ?>
 											<div class="btn-group" role="group">
 												<button type="button" id="Anular" class="btn btn-warning btn-lg" style="font-size: 20px;" onclick="CredencialUser(<?php echo $idPedido; ?>, 'A', 'AN')">
 													<b><i class="fa fa-exclamation fa-2x"></i><br>Anular</b>
 												</button>
 											</div>
+											<div class="btn-group" role="group">
+												<button type="button" id="BtnEliminar" class="btn btn-danger btn-lg" style="font-size: 20px;" data-permiso="1" onclick="CredencialUser(<?php echo $idPedido; ?>, <?php echo $Mesa['NroMesa']; ?>, 'DEL')">
+													<b><i class="fa fa-trash fa-2x"></i><br>Eliminar Pedido</b>
+												</button>
+											</div>
 										<?php } ?>
-										<div class="btn-group" role="group">
-											<button type="button" id="BtnEliminar" class="btn btn-danger btn-lg" style="font-size: 20px;" data-permiso="1" onclick="CredencialUser(<?php echo $idPedido; ?>, <?php echo $Mesa['NroMesa']; ?>, 'DEL')">
-												<b><i class="fa fa-trash fa-2x"></i><br>Eliminar Pedido</b>
-											</button>
-										</div>
 									</div>
 								</div>
 							</div>

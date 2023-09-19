@@ -39,29 +39,54 @@ include "views/modules/botonera.php";
 		            <div class="row">
 		                <div align="center">
 		                       <?php
-		                        if ($_SESSION["puesto"] == "1")
-								{
-		                        	echo '<img style="max-width: 30%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
-								} 
-								else if($_SESSION["puesto"] == "6")
-								{
-		                        	echo '<img style="max-width: 90%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
-		                        }
-		                    ?>
-		                    <div class="">
-		                    	<h1 class="text-info">Bienvenido<br> <?php echo $_SESSION['usuario']; ?><br></h1>
-		                        <strong class="text-info"> * * * 
+									switch ($_SESSION["puesto"]) 
+										{
+											case 1:
+												echo '<img style="max-width: 30%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
+											break;
+											case 2:
+												echo '<img style="max-width: 30%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
+											break;
+											case 3:
+												echo '<img style="max-width: 30%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
+											break;
+											case 4:
+												echo '<img style="max-width: 30%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
+											break;
+											case 5:
+												echo '<img style="max-width: 30%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
+											break;
+											case 6:
+												echo '<img style="max-width: 30%" src="views/dist/img/logo.png" class="user-image img-responsive"/>';
+											break;
+										}
+								?>
+		                <div class="">
+		                    <h1 class="text-info">Bienvenido<br></h1>
+		                        	<strong class="text-info">
 									<?php 
-									
-									if ($_SESSION["puesto"] == "1")
+									switch ($_SESSION["puesto"]) 
 									{
-										echo 'Administrador/a';
-									} 
-									else if($_SESSION["puesto"] == "6")
-									{
-										echo 'Cajero/a';
-									} 
-									?>  * * *  
+										case 1:
+											echo 'Programador';
+										break;
+										case 2:
+											echo 'Gerencia';
+										break;
+										case 3:
+											echo 'Administrador';
+										break;
+										case 4:
+											echo 'Cajero/a';
+										break;
+										case 5:
+											echo 'Mesero/a';
+										break;
+										case 6:
+											echo 'Cocinero/a';
+										break;
+									}
+									?>   
 								</strong>
 		                    </div>
 		                </div>
