@@ -80,7 +80,7 @@
           </li>
         <?php } ?>
 
-        <?php if($_SESSION["puesto"] == 1 || $_SESSION["puesto"] == 4 || $_SESSION["puesto"] == 5 ) { ?>              
+        <?php if($_SESSION["puesto"] == 1 || $_SESSION["puesto"] == 2 || $_SESSION["puesto"] == 3 || $_SESSION["puesto"] == 4 || $_SESSION["puesto"] == 5 ) { ?>              
           <li><a href="salon"><i class="fa fa-pencil"></i><span>Salon</span></a></li>
         <?php } ?>
 
@@ -103,7 +103,9 @@
               <li><a href="ReporteBebidasmasVendidas">Bebidas mas Vendidas</a></li>
               <li><a href="ReporteCuentasporcobrar">Cuentas por cobrar</a></li>
               <li><a href="ReporteCortesias">Cortesías</a></li>
+            <?php if ($_SESSION['puesto'] == 1){ ?>
               <li><a href="ReporteEliminados">Eliminados</a></li>
+            <?php } ?>
             </ul>
           </li>
         <?php } ?>

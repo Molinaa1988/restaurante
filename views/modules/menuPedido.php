@@ -136,7 +136,7 @@
 												<b><i class="fa fa-cutlery fa-2x"></i><br>Enviar a Cocina</b>
 											</button>
 										</div>
-										<?php if($_SESSION["puesto"] == 2) { ?>
+										<?php if(($_SESSION["puesto"] <= 3)) { ?>
 											<div class="btn-group" role="group">
 												<button type="button" id="Anular" class="btn btn-warning btn-lg" style="font-size: 20px;" onclick="CredencialUser(<?php echo $idPedido; ?>, 'A', 'AN')">
 													<b><i class="fa fa-exclamation fa-2x"></i><br>Anular</b>

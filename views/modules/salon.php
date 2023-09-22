@@ -185,7 +185,7 @@
 <script>
 
 	$(document).ready(function() {
-		// actualizarMesas();            // Las mesas no se veran si esto esta comentariado si nunca se a echo una venta asi que la primera venta hay que desactivarlo
+		//actualizarMesas();            // Las mesas no se veran si esto esta comentariado si nunca se a echo una venta asi que la primera venta hay que desactivarlo
 		iniScript();
 		dataOption();
 	});
@@ -293,7 +293,7 @@
 								<a href="#" ${mesa.accion}>
 									<center>
 										<img src="views/dist/img/${mesa.img}" class="img-circle" alt="User Image" width="100%">
-										<h4><span class="label label-primary">M # ${mesa.Etiqueta}</span></h4>
+										<h4><span class="label label-primary">Mesa # ${mesa.idMesa}</span></h4>
 									</center>
 								</a>
 							</div>
