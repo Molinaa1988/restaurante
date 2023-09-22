@@ -35,7 +35,7 @@ class modelSalon{
 		return $stmt->fetch();
 		$stmt->null;
 	}
-	
+	 
 	public function cambioDetallePedido(){
 		$stmt = Conexion::conectar()->prepare("SELECT * FROM detallepedido ORDER BY Cambios DESC LIMIT 1");
 		$stmt->execute();
