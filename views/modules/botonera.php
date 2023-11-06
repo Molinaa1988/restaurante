@@ -98,7 +98,9 @@
             <ul class="treeview-menu">
               <li><a href="ReporteVentasporDia">Balance por dia</a></li>
               <li><a href="ReporteVentas">Ventas</a></li>
+          <?php if($_SESSION['PUESTO'] == 1){ ?>
               <li><a href="ReporteMejoresVendedores">Mejores Vendedores</a></li>
+          <?php } ?>
               <li><a href="ReportePlatosmasVendidos">Platos mas Vendidos</a></li>
               <li><a href="ReporteBebidasmasVendidas">Bebidas mas Vendidas</a></li>
               <li><a href="ReporteCuentasporcobrar">Cuentas por cobrar</a></li>
@@ -127,7 +129,8 @@
             </ul>
           </li>
         <?php } ?>
-      </li>-->
+
+      </li>
     </ul>
   </section>
 </aside>

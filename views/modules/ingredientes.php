@@ -63,6 +63,7 @@ function imprimir(){
       <th>Descripcion</th>
         <th>Unidad</th>
         <th>Cantidad</th>
+        <th>Estado</th>
         <th>Acciones</th>
         </thead>
         
@@ -101,6 +102,18 @@ function imprimir(){
                   </ul>
                 </div>
               </td>
+              
+              <td>
+                <center>
+                      <?php 
+                        if($item['Estado'] == 1){
+                          echo '<span class="label label-success">Activo</span>';
+                        } else {
+                          echo '<span class="label label-danger">No Activo</span>';
+                        }
+                      ?>
+                    </center>
+              </td>
           </tr>
 
 <!--  Modals actualizar pa los ingredientes-->
@@ -113,21 +126,29 @@ function imprimir(){
                   <div class="modal-content">
                       <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
                           <h3 align="center" class="modal-title" id="myModalLabel">Actualizar Ingrediente</h3>
                       </div>
+                      
                       <div class="panel-body">
                       <div class="row">
+                      
                       <input type="hidden" name="idIA" value="<?php echo $item['IdIngredientes']; ?>"> 
+                        
                         <div class="col-md-6">
-                          <input class="form-control" name="descripcionIA" placeholder="Descripcion" autocomplete="off" required value="<?php echo $item['DescripcionIng']; ?>"><br>
+                            <input class="form-control" name="descripcionIA" placeholder="Descripcion" autocomplete="off" required value="<?php echo $item['DescripcionIng']; ?>"><br>
                         </div>
-                        <div class="col-md-6">
-                          <input class="form-control" name="unidadIA" placeholder="Unidad o medida" autocomplete="off" required value="<?php echo $item['UnidadMedida']; ?>">
-                        </div> </break><br>
+                        
                         <div class="col-md-6">
                           <input class="form-control" name="cantidadIA" placeholder="Cantidad" autocomplete="off" required value="<?php echo $item['Cantidad']; ?>"><br>
                         </div>
+
+                        <div class="col-md-6">
+                          <input class="form-control" name="unidadIA" placeholder="Unidad o medida" autocomplete="off" required value="<?php echo $item['UnidadMedida']; ?>">
+                        </div> </break><br>
+
+                      
+
+                        
                       </div>
                       </div>
                       <div class="modal-footer">
@@ -281,11 +302,11 @@ function imprimir(){
 
 
     //funciuones para hacer el inline editing
-    function highlightEdit(editableObj) {
+    /*function highlightEdit(editableObj) {
       $(editableObj).css("background", "#FFF");
-    }
+    }*/
 
-    function saveInlineEdit(editableObj,column,IdIngredientes) {
+    /*function saveInlineEdit(editableObj,column,IdIngredientes) {
       // no change change made then return false
       if($(editableObj).attr('data-old_value') === editableObj.innerHTML)
       
@@ -310,7 +331,7 @@ function imprimir(){
       }
       });
      
-    }
+    }*/
 
   </script>
 
